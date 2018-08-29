@@ -4,6 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <link href="webjars/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <title>JSP working</title>
 </head>
 <body>
@@ -18,5 +19,7 @@ My name is ${name} and my password is ${password}
     <p><font color="red">${errorMessage}</font></p>
     Name: <input type="text" name="name"> Password: <input type="password" name="password"> <input type="submit" value="Login">
 </form>
+<script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>

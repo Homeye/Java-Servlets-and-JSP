@@ -1,3 +1,5 @@
+package login;
+
 import todo.TodoService;
 
 import javax.servlet.ServletException;
@@ -10,7 +12,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
 
-    private UserValidationService userValidationService = new UserValidationService();
+    private LoginService loginService = new LoginService();
 
     private TodoService todoService = new TodoService();
 
@@ -42,7 +44,7 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
 
-        if (userValidationService.isUserValid(name, password)) {
+        if (loginService.isUserValid(name, password)) {
             request.setAttribute("name", name);
             request.setAttribute("password", password);
             request.setAttribute("todos", todoService.retrieveTodos());

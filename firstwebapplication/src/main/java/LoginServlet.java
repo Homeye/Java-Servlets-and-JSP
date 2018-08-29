@@ -30,4 +30,10 @@ public class LoginServlet extends HttpServlet {
         request.setAttribute("password", request.getParameter("password"));
         request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("name", request.getParameter("name"));
+        request.getRequestDispatcher("/welcome.jsp").forward(request, response);
+    }
 }

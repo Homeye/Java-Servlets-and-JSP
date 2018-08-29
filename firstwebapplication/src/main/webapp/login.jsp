@@ -14,5 +14,8 @@
 %>
 <div>Current date is <%=date%>></div>
 My name is ${name} and my password is ${password}
+<form action="login.do" method="post">
+    Enter your name <input type="text" name="name"> <input type="submit" value="Login">
+</form>
 </body>
 </html>

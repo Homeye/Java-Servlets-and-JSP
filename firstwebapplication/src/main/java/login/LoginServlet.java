@@ -50,6 +50,7 @@ public class LoginServlet extends HttpServlet {
 //            request.setAttribute("todos", todoService.retrieveTodos());
 //            request.getRequestDispatcher("/welcome.jsp").forward(request, response);
             ///todo.do
+            request.getSession().setAttribute("name", name);
             response.sendRedirect("/todo.do");
 
         } else {

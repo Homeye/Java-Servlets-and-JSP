@@ -7,6 +7,7 @@
     <title>Todos</title>
 </head>
 <body>
+<p>Welcome ${name}</p>
 <p>Your todos are:</p>
 <%--<p>${todos}</p>--%>
 <ol>

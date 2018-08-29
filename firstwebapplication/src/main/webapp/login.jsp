@@ -13,6 +13,6 @@
     Date date = new Date();
 %>
 <div>Current date is <%=date%>></div>
-Text from jsp ${name}
+My name is ${name} and my password is ${password}
 </body>
 </html>

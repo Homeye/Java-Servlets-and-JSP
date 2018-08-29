@@ -19,6 +19,9 @@ public class LoginServlet extends HttpServlet {
 //        out.println("My First Servlet");
 //        out.println("</body>");
 //        out.println("</html>");
+        String name = request.getParameter("name");
+        System.out.println(name);
+        request.setAttribute("name", name);
         request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 }

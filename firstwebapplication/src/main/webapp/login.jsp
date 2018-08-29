@@ -6,6 +6,6 @@
     <title>JSP working</title>
 </head>
 <body>
-Text from jsp
+Text from jsp ${name}
 </body>
 </html>

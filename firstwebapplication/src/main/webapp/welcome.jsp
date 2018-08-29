@@ -6,6 +6,8 @@
     <title>Welcome</title>
 </head>
 <body>
-Welcome ${name}, your password is ${password}
+<p>Welcome ${name}, your password is ${password}</p>
+<p>Your todos are:</p>
+<p>${todos}</p>
 </body>
 </html>

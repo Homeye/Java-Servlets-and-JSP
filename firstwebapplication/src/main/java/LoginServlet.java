@@ -1,3 +1,5 @@
+import todo.TodoService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,8 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
 
     private UserValidationService userValidationService = new UserValidationService();
+
+    private TodoService todoService = new TodoService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -41,6 +45,7 @@ public class LoginServlet extends HttpServlet {
         if (userValidationService.isUserValid(name, password)) {
             request.setAttribute("name", name);
             request.setAttribute("password", password);
+            request.setAttribute("todos", todoService.retrieveTodos());
             request.getRequestDispatcher("/welcome.jsp").forward(request, response);
         } else {
             request.setAttribute("errorMessage", "Invalid Credentials");

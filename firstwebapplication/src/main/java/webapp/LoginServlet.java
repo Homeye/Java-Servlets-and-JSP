@@ -21,6 +21,6 @@ public class LoginServlet extends HttpServlet {
 //        out.println("My First Servlet");
 //        out.println("</body>");
 //        out.println("</html>");
-        request.getRequestDispatcher("webapp/WEB-INF/views/login.jsp").forward(request, response);
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 }

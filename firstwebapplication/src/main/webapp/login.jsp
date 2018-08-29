@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
-    <title>$Title$</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>JSP working</title>
 </head>
 <body>
-$END$
+Text from jsp
 </body>
 </html>

@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/todo.do")
-public class TodoServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/list-todo.do")
+public class ListTodoServlet extends HttpServlet {
 
     private TodoService todoService = new TodoService();
 
@@ -16,14 +16,5 @@ public class TodoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("todos", todoService.retrieveTodos());
         request.getRequestDispatcher("/todo.jsp").forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String newTodo = request.getParameter("new todo");
-        todoService.addTodo(new Todo(newTodo));
-//        request.setAttribute("todos", todoService.retrieveTodos());
-//        request.getRequestDispatcher("/todo.jsp").forward(request, response);
-        response.sendRedirect("/todo.do");
     }
 }

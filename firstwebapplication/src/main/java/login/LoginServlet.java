@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
 //            request.getRequestDispatcher("/welcome.jsp").forward(request, response);
             ///todo.do
             request.getSession().setAttribute("name", name);
-            response.sendRedirect("/todo.do");
+            response.sendRedirect("/list-todo.do");
 
         } else {
             request.setAttribute("errorMessage", "Invalid Credentials");

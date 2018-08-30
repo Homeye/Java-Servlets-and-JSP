@@ -15,6 +15,6 @@ public class DeleteTodoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         todoService.deleteTodo(new Todo(request.getParameter("todo")));
-        response.sendRedirect("/todo.do");
+        response.sendRedirect("/list-todo.do");
     }
 }

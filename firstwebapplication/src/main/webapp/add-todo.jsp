@@ -40,9 +40,15 @@
         <div class="container">
             <p>Your New Action Item:</p>
             <form method="POST" action="/add-todo.do">
-                New Todo : <input name="new todo" type="text" /><br>
-                Category : <input name="category" type="text" /><br>
-                <input name="Add" type="submit" />
+                <fieldset class="form-group">
+                    <label>Description</label>
+                    <input name="new todo" type="text" class="form-control"/>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Category</label>
+                    <input name="category" type="text" class="form-control"/>
+                </fieldset>
+                <input name="add" type="submit" class="btn btn-success" value="Submit"/>
             </form>
         </div>
         <footer class="footer">

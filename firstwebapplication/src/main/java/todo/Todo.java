@@ -4,8 +4,11 @@ public class Todo {
 
     private String name;
 
-    public Todo(String name) {
+    private String category;
+
+    public Todo(String name, String category) {
         this.name = name;
+        this.category = category;
     }
 
     public String getName() {
@@ -16,10 +19,19 @@ public class Todo {
         this.name = name;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "Todo{" +
                 "name='" + name + '\'' +
+                ", category='" + category + '\'' +
                 '}';
     }
 
@@ -30,11 +42,14 @@ public class Todo {
 
         Todo todo = (Todo) o;
 
-        return name.equals(todo.name);
+        if (name != null ? !name.equals(todo.name) : todo.name != null) return false;
+        return category != null ? category.equals(todo.category) : todo.category == null;
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (category != null ? category.hashCode() : 0);
+        return result;
     }
 }

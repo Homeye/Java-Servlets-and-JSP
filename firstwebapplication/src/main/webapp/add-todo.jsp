@@ -24,17 +24,7 @@
     </style>
 </head>
 <body>
-<%--<p>Welcome ${name}</p>--%>
-<%--<p>Your todos are:</p>--%>
-<%--<p>${todos}</p>--%>
-<%--<ol>--%>
-    <%--<c:forEach items="${todos}" var="todo">--%>
-        <%--<li>${todo.name} &nbsp; <a href="delete-todo.do?todo=${todo.name}">Delete</a></li>--%>
-    <%--</c:forEach>--%>
-<%--</ol>--%>
-<%--<form action="add-todo.do" method="post">--%>
-    <%--<input type="text" name="new todo"> <input type="submit" value="Add">--%>
-<%--</form>--%>
+
 <nav role="navigation" class="navbar navbar-default">
 
     <div class="">
@@ -55,20 +45,11 @@
 </nav>
 
 <div class="container">
-    <H1>Welcome ${name}</H1>
-
-    Your Todos are
-    <ol>
-        <c:forEach items="${todos}" var="todo">
-            <li>${todo.name}&nbsp;<a
-                    href="/delete-todo.do?todo=${todo.name}">Delete</a></li>
-        </c:forEach>
-    </ol>
-
-    <p>
-        <font color="red">${errorMessage}</font>
-    </p>
-    <a href="/add-todo.do">Add New Todo</a>
+    Your New Action Item:
+    <form method="POST" action="/add-todo.do">
+        New Todo : <input name="new todo" type="text" /> <input name="Add"
+                                                            type="submit" />
+    </form>
 </div>
 
 <footer class="footer">
